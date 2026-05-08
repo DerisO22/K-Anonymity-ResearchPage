@@ -4,11 +4,11 @@
 		"module": "nodenext",
 		"moduleResolution": "nodenext",
 		"outDir": "./dist",
-		"rootDir": "./src",
+		"rootDir": "./",
 		"strict": true,
 		"skipLibCheck": true,
 		"esModuleInterop": true,
 		"allowSyntheticDefaultImports": true
     },
-    "include": ["src/**/*"]
+    "include": ["**/*.ts"]
 }
