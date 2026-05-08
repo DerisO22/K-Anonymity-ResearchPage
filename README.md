@@ -10,4 +10,5 @@
 - run `npm i && node server.ts`
 
 ### Using Docker-Compose Instead
+- Open Docker desktop
 - Run `docker-compose up`

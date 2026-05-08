@@ -14,14 +14,14 @@ services:
 
   backend:
     image: node:lts-alpine
-    working_dir: /server
+    working_dir: /backend
     volumes:
-      - ./server:/server
-      - /server/node_modules
+      - ./backend:/backend
+      - /backend/node_modules
     ports: 
       - "3001:3001"
     environment:
       - NODE_ENV:development
       - DATABASE_URL=postgres://example-database-user:HmxWFa4EgEYJnjs7ABdLRELS4fpv86vL@example-database:5432/example-database
       - CORS_URL=http://localhost:5173
-    command: sh -c "npm install && node server.ts"
+    command: sh -c "npm install && npm run dev"
