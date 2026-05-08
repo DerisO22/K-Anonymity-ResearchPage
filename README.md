@@ -7,7 +7,7 @@
 
 ### backend
 - navigate to backend directory.
-- run `npm i && node server.ts`
+- run `npm i && npm run dev`
 
 ### Using Docker-Compose Instead
 - Open Docker desktop
