@@ -1,5 +1,5 @@
 import dotenv from 'dotenv';
-import pg from 'pg';
+import pg, { Client } from 'pg';
 import fs from 'fs';
 import { fileURLToPath } from 'url';
 import path from 'path';
@@ -11,7 +11,7 @@ const dbPath = path.resolve(__dirname, "schema.sql")
 
 const { Client } = pg;
 
-export async function connectToDatabase(client) {
+export async function connectToDatabase(client: any) {
     try {
         await client.connect();
         console.log("Connected to database successfully");
