@@ -4,7 +4,7 @@ version: '3.8'
 services:
   frontend:
     image: node:lts-alpine
-    workking_dir: /frontend
+    working_dir: /frontend
     volumes:
       - ./frontend:/frontend
       - /frontend/node_modules
@@ -24,6 +24,4 @@ services:
       - NODE_ENV:development
       - DATABASE_URL=postgres://example-database-user:HmxWFa4EgEYJnjs7ABdLRELS4fpv86vL@example-database:5432/example-database
       - CORS_URL=http://localhost:5173
-    depends_on:
-      - example-database
     command: sh -c "npm install && node server.ts"
