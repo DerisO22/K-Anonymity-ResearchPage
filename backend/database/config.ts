@@ -1,5 +1,5 @@
 import dotenv from 'dotenv';
-import pg, { Client } from 'pg';
+import pg from 'pg';
 import fs from 'fs';
 import { fileURLToPath } from 'url';
 import path from 'path';
@@ -11,7 +11,12 @@ const dbPath = path.resolve(__dirname, "schema.sql")
 
 const { Client } = pg;
 
-export async function connectToDatabase(client: any) {
+export async function connectToDatabase(client: pg.Client | undefined) {
+    if (!client) {
+        console.error("Database client is undefined. Cannot connect.");
+        return;
+    }
+    
     try {
         await client.connect();
         console.log("Connected to database successfully");
@@ -33,4 +38,7 @@ export const createClient = () => {
             ssl: { rejectUnauthorized: false }
         })
     }
+
+    console.error("No database URL found in environment variables");
+    return undefined;
 }

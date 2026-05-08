@@ -6,14 +6,14 @@ const router = express.Router();
 
 router.get('/metrics', async(req: Request, res: Response) => {
     try {       
-        const result = await getAllMetricData();
+        const result = await getAllMetricData(req.pgClient);
 
         if(!result) {
             return res.status(404).json({ error: "Metrics not found" });
         }
 
         res.json(result);
-    } catch (err) { 
+    } catch (err: any) { 
         console.error("Rip");
         res.status(500).json({ error: err.message });
     }
