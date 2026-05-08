@@ -1,6 +1,6 @@
 import express from "express";
 import type { Request, Response } from "express";
-import { getAllMetricData } from "../services/metrics_service";
+import { getAllMetricData } from "../services/metrics_service.ts";
 
 const router = express.Router();
 

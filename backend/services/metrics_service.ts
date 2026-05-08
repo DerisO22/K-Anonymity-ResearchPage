@@ -1,4 +1,4 @@
-import { METRIC_QUERIES } from "../database/queries/metrics"
+import { METRIC_QUERIES } from "../database/queries/metrics_queries.ts"
 
 export const getAllMetricData = async() => {
     try {

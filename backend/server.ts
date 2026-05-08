@@ -1,8 +1,10 @@
 import express from 'express';
-import type { Request, Response, Application } from 'express';
+import type { Application } from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
 
+import { createClient, connectToDatabase } from './database/config.ts';
+const client = createClient();
 dotenv.config();
 
 /**
@@ -19,22 +21,26 @@ app.use(cors({
     credentials: true
 }))
 
-// try {
-//     await intializatDatabase(client);
-// } catch (err) {
-//     console.error("Failed to initialize database schema: ", err);
-// }
+const setUpApp = async () => {
+    try {
+        await connectToDatabase(client);
+    } catch (err) {
+        console.error("Failed to initialize database schema: ", err);
+    }
 
-/**
- *  Routing
-// **/
-// app.use((req, res, next) => {
-//     req.pgClient = client;
-//     next();
-// })
+    /**
+     *  Routing
+    **/
+    app.use((req, res, next) => {
+        req.pgClient = client;
+        next();
+    })
 
-app.use('api//metrics', metricsRouter);
+    app.use('/api/metrics', metricsRouter);
 
-app.listen(PORT, () => {
-    console.log(`Server Running on Port ${PORT}`);
-});
+    app.listen(PORT, () => {
+        console.log(`Server Running on Port ${PORT}`);
+    });
+}
+
+setUpApp();
