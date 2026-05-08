@@ -1,5 +1,5 @@
 import express from 'express';
-import type { Application } from 'express';
+import type { Request, Response, NextFunction, Application } from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
 
@@ -31,7 +31,7 @@ const setUpApp = async () => {
     /**
      *  Routing
     **/
-    app.use((req, res, next) => {
+    app.use((req: Request, res: Response, next: NextFunction) => {
         req.pgClient = client;
         next();
     })
