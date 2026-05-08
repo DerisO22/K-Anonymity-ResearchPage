@@ -27,9 +27,9 @@ export async function connectToDatabase(client) {
 }
 
 export const createClient = () => {
-    if(process.env.DATABASE_PUBLIC_URL) {
+    if(process.env.DATABASE_URL) {
         return new Client({
-            connectionString: process.env.DATABASE_PUBLIC_URL,
+            connectionString: process.env.DATABASE_URL,
             ssl: { rejectUnauthorized: false }
         })
     }
