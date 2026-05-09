@@ -16,7 +16,7 @@
     "typescript": "^6.0.3"
   },
   "scripts": {
-    "build": "tsc",
+    "build": "tsc && cp src/database/schema.sql dist/database/schema.sql",
     "start": "node dist/server.js",
     "dev": "npx tsx watch server.ts"
   }
