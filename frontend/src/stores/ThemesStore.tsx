@@ -1,4 +1,5 @@
 import { create } from 'zustand';
+import { persist } from 'zustand/middleware';
 
 export type ThemeType = 'light' | 'dark';
 
@@ -10,17 +11,31 @@ export interface ThemeStoreType {
     }
 }
 
-export const useThemeStore = create<ThemeStoreType>((set) => ({
-    theme: 'light',
-
-    actions: {
-        toggleTheme: () => 
-            set((state) => ({
-                theme: state.theme === 'light' ? 'dark' : 'light'
-            })),
-        setTheme: (newTheme: ThemeType) => set({ theme: newTheme })
+const getIntitialTheme = (): ThemeType => {
+    if(typeof window !== 'undefined' && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        return 'dark';
     }
-}));
+
+    return 'light';
+}
+
+export const useThemeStore = create<ThemeStoreType>()(
+    persist(
+        (set) => ({
+            theme: getIntitialTheme(),
+            actions: {
+                toggleTheme: () => 
+                    set((state) => ({
+                        theme: state.theme === 'light' ? 'dark' : 'light'
+                    })),
+                setTheme: (newTheme: ThemeType) => set({ theme: newTheme })
+            }
+        }),
+        {
+            name: 'theme-storage'
+        }
+    )
+);
 
 export const useTheme = () => useThemeStore((state) => state.theme);
 export const useThemeActions = () => useThemeStore((state) => state.actions);
