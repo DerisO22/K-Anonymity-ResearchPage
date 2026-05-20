@@ -5,10 +5,8 @@ export type ThemeType = 'light' | 'dark';
 
 export interface ThemeStoreType {
     theme: 'light' | 'dark',
-    actions: {
-        toggleTheme: () => void,
-        setTheme: (newTheme: ThemeType) => void,
-    }
+    toggleTheme: () => void,
+    setTheme: (newTheme: ThemeType) => void,
 }
 
 const getIntitialTheme = (): ThemeType => {
@@ -23,19 +21,19 @@ export const useThemeStore = create<ThemeStoreType>()(
     persist(
         (set) => ({
             theme: getIntitialTheme(),
-            actions: {
-                toggleTheme: () => 
-                    set((state) => ({
-                        theme: state.theme === 'light' ? 'dark' : 'light'
-                    })),
-                setTheme: (newTheme: ThemeType) => set({ theme: newTheme })
-            }
+            
+            toggleTheme: () => 
+                set((state) => ({
+                    theme: state.theme === 'light' ? 'dark' : 'light'
+                })),
+            setTheme: (newTheme: ThemeType) => set({ theme: newTheme })
         }),
         {
-            name: 'theme-storage'
+            name: 'theme-storage',
         }
     )
 );
 
 export const useTheme = () => useThemeStore((state) => state.theme);
-export const useThemeActions = () => useThemeStore((state) => state.actions);
+export const useThemeToggle = () => useThemeStore((state) => state.toggleTheme);
+export const useThemeSet = () => useThemeStore((state) => state.setTheme);

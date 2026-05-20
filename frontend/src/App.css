@@ -1,0 +1,5 @@
+@import url('./styles/globals.css');
+
+.text {
+    color: var(--text-color);
+}
