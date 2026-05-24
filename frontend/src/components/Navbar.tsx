@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { handle_scroll_top } from "../util/helpers/scroll_top";
 import ThemeButton from "./ThemeButton";
+import './Navbar.css';
 
 const Navbar = () => {
     return (

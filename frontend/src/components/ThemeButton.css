@@ -1,0 +1,18 @@
+.theme_toggle_button {
+    width: 2.5rem;
+    height: 2.5rem;
+
+    border-radius: 10px;
+    border: none;
+
+    background-image: url('../../public/icons/brightness.png');
+    background-size: 70%;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    transition: all 0.3s ease-in-out;
+}
+
+[data-theme="dark"] .theme_toggle_button {
+    background-image: url('../../public/icons/moon.png');
+}
