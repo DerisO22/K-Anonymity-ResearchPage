@@ -1,6 +1,6 @@
 import '../styles/pages.css';
 
-const ResearchInfo = () => {
+const Research = () => {
     return (
         <div className="page_container">
             Background
@@ -8,4 +8,4 @@ const ResearchInfo = () => {
     )
 }
 
-export default ResearchInfo;
+export default Research;
