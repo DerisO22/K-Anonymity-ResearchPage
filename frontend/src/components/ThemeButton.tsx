@@ -6,9 +6,7 @@ const ThemeButton = () => {
     const toggleTheme = useThemeToggle();
 
     return (
-        <button className='theme_toggle_button' onClick={toggleTheme}>
-            {theme}
-        </button>
+        <button className='theme_toggle_button' onClick={toggleTheme} />
     )
 }
 
