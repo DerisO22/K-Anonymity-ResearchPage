@@ -1,10 +1,10 @@
 import { useEffect } from 'react';
 import './App.css';
-import { useTheme, useThemeToggle } from './stores/ThemesStore';
+import { useTheme } from './stores/ThemesStore';
+import ThemeButton from './components/ThemeButton';
 
 function App() {
 	const theme = useTheme();
-	const toggleTheme = useThemeToggle();
 
 	useEffect(() => {
 		document.documentElement.setAttribute('data-theme', theme);
@@ -13,9 +13,7 @@ function App() {
 	return (
 		<>
 			<div className="text">Hello Tests</div>
-			<button className='toggle_theme_button' onClick={toggleTheme}>
-				{theme}
-			</button>
+			<ThemeButton />
 		</>
 	)
 }

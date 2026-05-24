@@ -4,7 +4,7 @@ import { persist } from 'zustand/middleware';
 export type ThemeType = 'light' | 'dark';
 
 export interface ThemeStoreType {
-    theme: 'light' | 'dark',
+    theme: ThemeType,
     toggleTheme: () => void,
     setTheme: (newTheme: ThemeType) => void,
 }

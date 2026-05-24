@@ -1,0 +1,14 @@
+import { useThemeStore, useThemeToggle } from '../stores/ThemesStore'
+
+const ThemeButton = () => {
+    const {theme} = useThemeStore();
+    const toggleTheme = useThemeToggle();
+
+    return (
+        <button className='theme_toggle_button' onClick={toggleTheme}>
+            {theme}
+        </button>
+    )
+}
+
+export default ThemeButton
