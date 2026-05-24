@@ -1,3 +1,5 @@
+import '../styles/pages.css';
+
 const ResearchInfo = () => {
     return (
         <div className="page_container">

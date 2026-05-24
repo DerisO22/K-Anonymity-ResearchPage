@@ -1,3 +1,5 @@
+import '../styles/pages.css';
+
 const Results = () => {
     return (
         <div className="page_container">
