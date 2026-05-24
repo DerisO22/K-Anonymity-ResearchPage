@@ -14,9 +14,6 @@ function App() {
 
 	return (
 		<>
-
-			<div className="text">Hello Tests</div>
-
 			<HashRouter>
 				<PageRouter />
 				<Navbar />
