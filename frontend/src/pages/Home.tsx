@@ -1,7 +1,9 @@
+import '../styles/pages.css';
+
 const Home = () => {
     return (
-		<div>
-			
+		<div className="page_container">
+			<div className="text">Home Page</div>
 		</div>
     )
 }

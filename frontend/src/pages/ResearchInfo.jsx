@@ -1,7 +1,7 @@
 const ResearchInfo = () => {
     return (
-        <div>
-        
+        <div className="page_container">
+            Background
         </div>
     )
 }

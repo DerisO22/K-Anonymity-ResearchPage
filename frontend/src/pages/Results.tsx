@@ -1,7 +1,7 @@
 const Results = () => {
     return (
-        <div>
-        
+        <div className="page_container">
+            Results
         </div>
     )
 }
