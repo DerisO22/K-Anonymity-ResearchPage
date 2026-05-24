@@ -2,6 +2,8 @@ import { useEffect } from 'react';
 import './App.css';
 import { useTheme } from './stores/ThemesStore';
 import ThemeButton from './components/ThemeButton';
+import { HashRouter } from 'react-router-dom';
+import PageRouter from './components/PageRouter';
 
 function App() {
 	const theme = useTheme();
@@ -12,8 +14,13 @@ function App() {
 
 	return (
 		<>
+
 			<div className="text">Hello Tests</div>
 			<ThemeButton />
+
+			<HashRouter>
+				<PageRouter />
+			</HashRouter>
 		</>
 	)
 }
