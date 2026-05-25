@@ -7,7 +7,7 @@
     position: relative;
 
     background-color: #003c5f;
-    z-index: 5;
+    z-index: 1;
 }
 
 .homepage_background {
@@ -16,7 +16,7 @@
     position: absolute;
 
     top: -21.75rem;
-    z-index: 5;
+    z-index: -1;
 
     background-image: url('../../public/background_bezier.webp');
     background-size: cover;
@@ -30,6 +30,7 @@
 .team_section {
     width: 100%;
     height: fit-content;
+    position: relative;
 
     padding-bottom: 3rem;
     z-index: 10;
@@ -115,10 +116,6 @@
 
     .bio_navigate_button { 
         bottom: 30%;
-    }
-
-    .homepage_background { 
-        top: -17.5rem;
     }
 }
 
