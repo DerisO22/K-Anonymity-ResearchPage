@@ -76,6 +76,88 @@ const Research = () => {
                         boundaries and picks the one that best balances privacy and detail. It&#39;s slower but more
                         deliberate and globally optimal.
                     </div>
+
+                    <h4>1. Modified K-Mondrian</h4>
+                    <div className="text_background">
+                        k-Mondrian is a top-down, recursive partitioning algorithm. It divides the dataset into increasingly smaller
+                        partitions along QI dimensions until no further split can be made without violating k-anonymity.
+                    </div>
+
+                    <div className="text_background">
+                        In the modified version, the partitioning phase remains unchanged; the dataset is split recursively using the
+                        median of numerical QIs or taxonomy tree branches of categorical QIs as cut points. The key change occurs in
+                        the anonymization phase: once final partitions are established, they serve as the equivalence classes. For each
+                        equivalence class, numerical QI values are replaced with the mean of all values in that class for the respective
+                        attribute, discarding the range that would have been used in standard Mondrian. Categorical QI values are
+                        replaced with the lowest common ancestor (LCA) of all values in that class according to the predefined
+                        taxonomy tree.
+                    </div>
+
+                    <h4>2. Modified K-Incognito</h4>
+                    <div className="text_background">
+                        k-Incognito is a bottom-up lattice search algorithm. It searches over a generalization lattice, a structured space
+                        of all possible generalization combinations, to find the least-generalizing configuration that satisfies k-
+                        anonymity.
+                    </div>
+
+                    <div className="text_background">
+                        In the modified version, the lattice is constructed over both numerical and categorical QIs, using their
+                        respective predefined taxonomy trees. For numerical QIs, the taxonomy tree is defined with range-based nodes
+                        as usual, the ranges serve purely as a structural mechanism to drive the lattice search and determine
+                        generalization levels. The lattice search proceeds as normal, identifying the optimal generalization combination
+                        that satisfies k-anonymity and produces equivalence classes across all QIs.
+                    </div>
+
+                    <div className="text_background">
+                        Once equivalence classes are formed, the range labels on numerical QI nodes are discarded and replaced
+                        with the mean of the actual values of all records in that equivalence class for each numerical attribute.
+                        Categorical QI values are replaced with the taxonomy tree ancestor node dictated by the selected generalization
+                        level. The published dataset therefore contains mean values for numerical QIs and taxonomy node labels for
+                        categorical QIs, never raw ranges.
+                    </div>
+
+                    <div className="text_background">
+                        This design keeps the lattice search fully intact and tractable, as the taxonomy tree structure for numerical QIs
+                        remains static throughout the search. The mean replacement is applied purely as a post-processing step after
+                        equivalence classes are finalized, and does not affect the grouping decisions made during the search.
+                    </div>
+                </div>
+
+                <h2>Parallel Execution Framework</h2>
+                <div className="execution_framework_container">
+                    <div className="text_background">
+                        A central component of this research is the evaluation of anonymization quality across multiple values of k
+                        simultaneously. Rather than running each algorithm once for a single k value, the framework will execute the
+                        modified k-Mondrian and modified k-Incognito algorithms in parallel for a range of k values.
+                    </div>
+
+                    <div className="text_background">
+                        Each parallel execution produces an independently anonymized version of the dataset for a specific k value.
+                        This allows the research to systematically study the trade-off between privacy and information loss as k
+                        increases, a relationship that is well-known in theory but less studied empirically under hybrid anonymization
+                        strategies. 
+                    </div>
+
+                    <div className="text_background">
+                        The parallel framework will:
+                    </div>
+
+                    <div className="sub_bullet">
+                        1. Accept a dataset and a defined range of k values as input.
+                    </div>
+
+                    <div className="sub_bullet">
+                        2. Spawn a parallel process for each k value, running both modified algorithms independently.
+                    </div>
+
+                    <div className="sub_bullet">
+                        3. Each process produces two anonymized datasets for its assigned k value: one from modified k-
+                        Mondrian, one from modified k-Incognito.
+                    </div>
+
+                    <div className="sub_bullet">
+                        4. Record privacy and information loss metrics for each anonymized version upon completion.
+                    </div>
                 </div>
             </div>
         </div>

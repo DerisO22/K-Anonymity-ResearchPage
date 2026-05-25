@@ -30,8 +30,11 @@ h3 {
 }
 
 h4 {
+    padding-top: 1rem;
+    padding-left: 1rem;
     font-size: 1.25rem;
-    color: white;
+    color: #003c5f;
+    line-height: 0.2rem;
 }
 
 .text {
