@@ -3,7 +3,7 @@ import '../styles/pages.css';
 const Research = () => {
     return (
         <div className="page_container">
-            Background
+            <h1>Research Background</h1>
         </div>
     )
 }
