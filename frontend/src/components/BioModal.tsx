@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import type { Profile } from "../util/consts/profiles";
 import { profile_bios } from "../util/consts/profiles";
 
 import './BioModal.css';
 
 const BioModal = () => {
+    const navigate = useNavigate();
     const { name } = useParams();
     const [ teammateData, setTeammateData ] = useState<Profile | null>();
 
@@ -15,11 +16,15 @@ const BioModal = () => {
         }
     }, []);
 
+    const handle_return_navigate = () => {
+        navigate(-1);
+    }
+
     return (
         <div className="bio_modal">
             {teammateData && (
                 <div className="teammate_profile_container">
-                    <button className="return_button"></button>
+                    <button onClick={handle_return_navigate} className="return_button"></button>
                     <div className="profile_header">{teammateData.teammate_profile.name}</div>
                     
                     <div className="profile_extra">

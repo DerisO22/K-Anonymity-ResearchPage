@@ -20,7 +20,7 @@ export const profile_bios: ProfileBios = {
     "genensisbautistasanchez": {
 		teammate_profile: {
             name: "Genensis BautistaSanchez",
-            role: "Lead",
+            role: "Editor",
             study: "Computer Science and Innovation",
             img_src: profilePlaceholder
         },
@@ -76,7 +76,7 @@ export const profile_bios: ProfileBios = {
 	"deriso'malley": {
 		teammate_profile: {
             name: "Deris O'Malley",
-            role: "Lead",
+            role: "Research Programmer",
             study: "Computer Science and Innovation",
             img_src: profilePlaceholder
         },

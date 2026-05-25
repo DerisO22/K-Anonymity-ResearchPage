@@ -12,4 +12,6 @@ html,
 
     background-color: rgba(186, 249, 255, 0.137);
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+    scroll-behavior: smooth;
 }
