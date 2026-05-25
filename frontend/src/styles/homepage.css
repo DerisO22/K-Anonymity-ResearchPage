@@ -23,6 +23,10 @@
     padding: 0rem 1rem;
 }
 
+.teammate_name {
+    font-weight: 600;
+}
+
 .bio_navigate_button {
     width: 3rem;
     height: 3rem;
@@ -32,8 +36,11 @@
     right: -0.75rem;
     border: 3px solid #fdc55e;
     background-color: #ffffff;
+    color: #003c5f;
 
     border-radius: 10px 20px 10px 20px;
+
+    font-weight: 520;
 
     transition: all 0.3s ease-in-out;
     cursor: pointer;
@@ -42,6 +49,7 @@
 .bio_navigate_button:hover {
     border-radius: 5px;
     background-color: #50d3ff;
+    color: #003c5f;
     border: 3px solid transparent;
 }
 

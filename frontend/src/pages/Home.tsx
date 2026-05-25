@@ -49,7 +49,7 @@ const Home = () => {
 	const navigate = useNavigate();
 
 	const navigate_to_bio = (name: string) => {
-		navigate(`/${name.replace(/\s/g, '')}`);
+		navigate(`/researcher-bio/${name.replace(/\s/g, '')}`);
 	}
 
     return (
@@ -65,7 +65,7 @@ const Home = () => {
 						<button onClick={() => navigate_to_bio(teammate.name)} className='bio_navigate_button'>Bio</button>
 
 						<div className="team_card_text_container">
-							<p className='text'>{teammate.name}</p>
+							<p className='text teammate_name'>{teammate.name}</p>
 							<p className="text">{teammate.role}</p>
 							<p className="text">{teammate.study}</p>
 						</div>
