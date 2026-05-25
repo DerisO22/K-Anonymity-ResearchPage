@@ -12,16 +12,16 @@
 
 .top_section_background {
     width: 100%;
-    min-height: 110vh;
+    min-height: 115vh;
     position: absolute;
 
-    top: -28.75rem;
+    top: -24.1rem;
     z-index: -1;
 
     background-image: url('../../public/background_bezier.webp');
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: -5rem;
+    background-position-y: -5rem;
 }
 
 /**
