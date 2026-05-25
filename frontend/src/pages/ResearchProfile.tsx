@@ -1,7 +1,9 @@
+import BioModal from "../components/BioModal";
+
 const ResearchProfile = () => {
     return (
-        <div>
-        
+        <div className="page_container">
+            <BioModal />
         </div>
     )
 }

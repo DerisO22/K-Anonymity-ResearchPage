@@ -19,7 +19,7 @@ export interface ProfileBios {
 export const profile_bios: ProfileBios = {
     "genensisbautistasanchez": {
 		teammate_profile: {
-            name: "Vikas Gowda",
+            name: "Genensis BautistaSanchez",
             role: "Lead",
             study: "",
             img_src: profilePlaceholder
@@ -69,9 +69,9 @@ export const profile_bios: ProfileBios = {
             linkedin_link: "test"
         }
 	},
-	"derisomalley": {
+	"deriso'malley": {
 		teammate_profile: {
-            name: "Vikas Gowda",
+            name: "Deris O'Malley",
             role: "Lead",
             study: "",
             img_src: profilePlaceholder

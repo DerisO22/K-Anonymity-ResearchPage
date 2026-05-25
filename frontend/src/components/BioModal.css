@@ -1,0 +1,30 @@
+.teammate_profile_container {
+    width: 95%;
+    height: 90vh;
+    position: relative;
+    box-sizing: border-box;
+
+    top: 2rem;
+    padding: 2rem;
+    margin: auto;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.1);
+
+    border-radius: 4px;
+    border: 2px solid #fdc55e;
+
+    background-color: #003c5f;
+}
+
+.profile_header {
+    font-size: 2rem;
+    color: white;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.495);
+    padding-bottom: 0.5rem;
+}
+
+.profile_extra {
+    padding-top: 0.5rem;
+    display: flex;
+    flex-direction: column;
+}

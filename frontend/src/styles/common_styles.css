@@ -14,12 +14,9 @@ h2 {
     font-size: 2.5rem;
     width: fit-content;
     height: 3rem;
-
     padding-top: 3rem;
 
-    color: black;
-
-
+    color: #003c5f;
     border-bottom: 5px solid rgb(255, 234, 48);
 
     text-align: center;
@@ -29,6 +26,7 @@ h2 {
 
 h3 {
     font-size: 1.5rem;
+    color: white;
 }
 
 h4 {
