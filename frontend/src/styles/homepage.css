@@ -1,7 +1,7 @@
 /*
-    Home Section
+    Top Section
 */
-.home_section {
+.top_section {
     width: 100%;
     height: 30rem;
     position: relative;
@@ -10,7 +10,7 @@
     z-index: 1;
 }
 
-.homepage_background {
+.top_section_background {
     width: 100%;
     min-height: 110vh;
     position: absolute;
@@ -26,7 +26,7 @@
 /**
     Team Section
 */
-.team_section {
+.page_sub_section {
     width: 100%;
     height: fit-content;
     position: relative;

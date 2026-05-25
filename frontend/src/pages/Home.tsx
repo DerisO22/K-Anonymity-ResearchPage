@@ -54,13 +54,13 @@ const Home = () => {
 
     return (
 		<div className="page_container">
-			<div className="home_section">
+			<div className="top_section">
 				<h1>Data Privacy + Deep Learning</h1>
 
-				<div className='homepage_background'></div>
+				<div className='top_section_background'></div>
 			</div>
 
-			<div className='team_section'>
+			<div className='page_sub_section'>
 				<h2>Our Team</h2>
 				<div className="team_container">
 					{team_info.map((teammate) => (
