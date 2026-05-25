@@ -12,39 +12,74 @@ export interface Profile {
     social_links: Socials
 }
 
-export const profile_bios = [
-    {
+export interface ProfileBios {
+    [key: string]: Profile
+}
+
+export const profile_bios: ProfileBios = {
+    "genensisbautistasanchez": {
 		teammate_profile: {
             name: "Vikas Gowda",
             role: "Lead",
             study: "",
             img_src: profilePlaceholder
+        },
+        background_description: "text text text",
+        social_links: {
+            github_link: "test",
+            linkedin_link: "test"
         }
-        background_description,
 	},
-	{
-		name: "Connor Hill",
-		role: "Programmer",
-		study: "Computer Science",
-		img_src: profilePlaceholder,
+    "vikasgowda": {
+		teammate_profile: {
+            name: "Vikas Gowda",
+            role: "Research Lead",
+            study: "",
+            img_src: profilePlaceholder
+        },
+        background_description: "text text text",
+        social_links: {
+            github_link: "test",
+            linkedin_link: "test"
+        }
 	},
-	{
-		name: "Andy Zheng",
-		role: "Programmer",
-		study: "Computer Science",
-		img_src: profilePlaceholder,
-		
+	"connorhill": {
+		teammate_profile: {
+            name: "Connor Hill",
+            role: "Research Programmer",
+            study: "Computer Science",
+            img_src: profilePlaceholder
+        },
+        background_description: "text text text",
+        social_links: {
+            github_link: "test",
+            linkedin_link: "test"
+        }
 	},
-	{
-		name: "Deris O'Malley",
-		role: "Programmer",
-		study: "Computer Science",
-		img_src: profilePlaceholder,
+	"andyzheng": {
+		teammate_profile: {
+            name: "Andy Zheng",
+            role: "",
+            study: "",
+            img_src: profilePlaceholder
+        },
+        background_description: "text text text",
+        social_links: {
+            github_link: "test",
+            linkedin_link: "test"
+        }
 	},
-	{
-		name: "Genensis BautistaSanchez",
-		role: "Editor",
-		study: "Computer Science",
-		img_src: profilePlaceholder,
+	"derisomalley": {
+		teammate_profile: {
+            name: "Vikas Gowda",
+            role: "Lead",
+            study: "",
+            img_src: profilePlaceholder
+        },
+        background_description: "text text text",
+        social_links: {
+            github_link: "test",
+            linkedin_link: "test"
+        }
 	},
-]
+}
