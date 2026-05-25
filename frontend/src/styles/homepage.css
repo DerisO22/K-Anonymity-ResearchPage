@@ -7,14 +7,15 @@
     position: relative;
 
     background-color: #003c5f;
+    z-index: 5;
 }
 
 .homepage_background {
     width: 100%;
-    min-height: 100vh;
+    min-height: 110vh;
     position: absolute;
 
-    top: -15rem;
+    top: -21.75rem;
     z-index: 5;
 
     background-image: url('../../public/background_bezier.webp');
@@ -29,6 +30,8 @@
 .team_section {
     width: 100%;
     height: fit-content;
+
+    padding-bottom: 3rem;
     z-index: 10;
 }
 
@@ -37,6 +40,8 @@
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 2rem;
+
+    z-index: 10;
 }
 
 .teammate_card {
@@ -107,6 +112,10 @@
 
     .bio_navigate_button { 
         bottom: 30%;
+    }
+
+    .homepage_background { 
+        top: -17.5rem;
     }
 }
 
