@@ -1,7 +1,16 @@
+import { useEffect } from "react";
+import { useParams } from "react-router-dom";
+
 const BioModal = () => {
-    return (
-        <div>
+    const { name } = useParams();
+
+    useEffect(() => {
         
+    }, []);
+
+    return (
+        <div className="bio_modal">
+            
         </div>
     )
 }
