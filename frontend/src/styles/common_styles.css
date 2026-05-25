@@ -6,19 +6,24 @@ h1 {
 
     color: white;
     text-shadow: 0 0 7px rgb(0, 0, 0);
+    z-index: 10;
 }
 
 h2 {
     font-size: 2.5rem;
-    width: 20rem;
+    width: fit-content;
     height: 3rem;
+
+    padding-top: 3rem;
 
     color: black;
 
-    border-radius: 20px 10px 20px 10px;
+
+    border-bottom: 5px solid rgb(255, 234, 48);
 
     text-align: center;
     margin: auto;
+    z-index: 10;
 }
 
 h3 {

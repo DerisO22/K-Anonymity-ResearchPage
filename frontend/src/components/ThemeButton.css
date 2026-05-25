@@ -25,6 +25,6 @@
 }
 
 [data-theme="dark"] .theme_toggle_button {
-    background-image: url('../../public/icons/moon.png');
+    background-image: url('../../public/icons/moon.webp');
     border: 2px solid rgb(159, 159, 159);
 }
