@@ -4,7 +4,7 @@ import ThemeButton from "./ThemeButton";
 import './Navbar.css';
 
 const Navbar = () => {
-    const getLinkClass = ({isActive}) => {
+    const getLinkClass = ({isActive} : {isActive: boolean}): string => {
         return isActive ? "navbar_link_button active" : "navbar_link_button";
     }
 
