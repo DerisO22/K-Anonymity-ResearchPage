@@ -38,6 +38,21 @@ h4 {
     font-size: 1rem;
 }
 
+.text_background {
+    font-size: 1rem;
+    padding: 1rem;
+    color: #003c5f;
+}
+
+.sub_bullet {
+    width: 90%;
+    font-size: 1rem;
+    padding: 0.2rem;
+    color: #003c5f;
+
+    margin: auto;
+}
+
 .highlight_text {
     font-size: 1rem;
     color: rgb(185, 175, 77);
@@ -65,5 +80,7 @@ h4 {
 }
 
 @media screen and (max-width: 800px) {
-   
+    h2 {
+        height: fit-content;
+    }
 }
