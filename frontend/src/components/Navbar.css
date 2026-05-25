@@ -5,7 +5,7 @@
 
     position: fixed;
     top: 0;
-    padding: 1rem 2rem 1rem 2rem;
+    padding: 1rem 1.5rem 1rem 1.5rem;
     left: 0;
     display: flex;
     justify-content: space-between;
@@ -25,15 +25,24 @@
 
 .navbar_link_button {
     color: white;
+    font-weight: 500;
 
     text-decoration: underline;
     text-decoration-color: transparent;
     text-underline-offset: 0.2rem;
-    text-decoration-thickness: 0.1rem;
+    text-decoration-thickness: 0.125rem;
 
     transition: all 0.3s ease-in-out;
 }
 
 .navbar_link_button:hover {
     text-decoration-color: #7ed3ef;
+}
+
+.navbar_link_button.active {  
+    color: #7ed3ef;
+}
+
+.navbar_link_button.active:hover {  
+    color: white;
 }
