@@ -10,6 +10,8 @@ const Navbar = () => {
 
     return (
         <div className="navbar">
+            <div className="logo_image" />
+
             <div className="navbar_links">
                 <NavLink className={getLinkClass} onClick={handle_scroll_top} to={"/"}>Home</NavLink>
                 <NavLink className={getLinkClass} onClick={handle_scroll_top} to={"/info"}>Background</NavLink>

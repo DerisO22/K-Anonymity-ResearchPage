@@ -1,9 +1,10 @@
 import '../styles/pages.css';
+import '../styles/common_styles.css'
 
 const Home = () => {
     return (
 		<div className="page_container">
-			<div className="text">Home Page</div>
+			<h1>Data Privacy + Deep Learning</h1>
 		</div>
     )
 }
