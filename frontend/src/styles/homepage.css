@@ -1,3 +1,35 @@
+/*
+    Home Section
+*/
+.home_section {
+    width: 100%;
+    height: 30rem;
+    position: relative;
+
+    background-color: #003c5f;
+}
+
+.homepage_background {
+    width: 100%;
+    min-height: 100vh;
+    position: absolute;
+
+    top: -15rem;
+
+    background-image: url('../../public/background_bezier.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/**
+    Team Section
+*/
+.team_section {
+    width: 100%;
+    height: fit-content;
+}
+
 .team_container {
     margin-top: 5rem;
     display: grid;

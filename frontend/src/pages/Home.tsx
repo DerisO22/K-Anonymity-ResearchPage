@@ -54,23 +54,29 @@ const Home = () => {
 
     return (
 		<div className="page_container">
-			<h1>Data Privacy + Deep Learning</h1>
+			<div className="home_section">
+				<h1>Data Privacy + Deep Learning</h1>
 
-			<h2>Our Team</h2>
-			<div className="team_container">
-				{team_info.map((teammate) => (
-					<div className='teammate_card' key={teammate.name}>
-						<img src={teammate.img_src} className='profile_image'/>
+				<div className='homepage_background'></div>
+			</div>
 
-						<button onClick={() => navigate_to_bio(teammate.name)} className='bio_navigate_button'>Bio</button>
+			<div className='team_section'>
+				<h2>Our Team</h2>
+				<div className="team_container">
+					{team_info.map((teammate) => (
+						<div className='teammate_card' key={teammate.name}>
+							<img src={teammate.img_src} className='profile_image'/>
 
-						<div className="team_card_text_container">
-							<p className='text teammate_name'>{teammate.name}</p>
-							<p className="text">{teammate.role}</p>
-							<p className="text">{teammate.study}</p>
+							<button onClick={() => navigate_to_bio(teammate.name)} className='bio_navigate_button'>Bio</button>
+
+							<div className="team_card_text_container">
+								<p className='text teammate_name'>{teammate.name}</p>
+								<p className="text">{teammate.role}</p>
+								<p className="text">{teammate.study}</p>
+							</div>
 						</div>
-					</div>
-				))}
+					))}
+				</div>	
 			</div>
 		</div>
     )
