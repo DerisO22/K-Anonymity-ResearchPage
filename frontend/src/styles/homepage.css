@@ -1,7 +1,7 @@
 .team_container {
     margin-top: 5rem;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     gap: 2rem;
 }
 
@@ -29,9 +29,54 @@
     position: absolute;
 
     bottom: 9.5rem;
-    right: -0.5rem;
-    border: 3px solid #50d3ff;
+    right: -0.75rem;
+    border: 3px solid #fdc55e;
     background-color: #ffffff;
 
-    border-radius: 50%;
+    border-radius: 10px 20px 10px 20px;
+
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.bio_navigate_button:hover {
+    border-radius: 5px;
+    background-color: #50d3ff;
+    border: 3px solid transparent;
+}
+
+/**
+    Media Queries
+*/
+@media screen and (max-width: 1200px) {
+    .team_container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .teammate_card {
+        width: 15rem;
+        height: 22.5rem;
+
+        position: relative;
+
+        background-color: #003c5f;
+        margin: auto;
+    }
+
+    .bio_navigate_button { 
+        bottom: 30%;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .team_container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+    .team_container {
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
