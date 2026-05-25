@@ -19,6 +19,7 @@ const BioModal = () => {
         <div className="bio_modal">
             {teammateData && (
                 <div className="teammate_profile_container">
+                    <button className="return_button"></button>
                     <div className="profile_header">{teammateData.teammate_profile.name}</div>
                     
                     <div className="profile_extra">
@@ -26,7 +27,8 @@ const BioModal = () => {
                         <div className="text">Study: {teammateData.teammate_profile.study}</div>
                     </div>
 
-                    
+                    <h3>Background</h3>
+                    <div className="text">{teammateData.background_description}</div>
                 </div>
             )}
         </div>
