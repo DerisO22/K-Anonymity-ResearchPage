@@ -1,3 +1,11 @@
+.page_sub_section {
+    box-sizing: border-box;
+    padding-left: 4rem;
+    padding-right: 4rem;
+
+    padding-bottom: 10rem;
+}
+
 .research_background_container {
     padding-top: 1rem;
     width: 50%;

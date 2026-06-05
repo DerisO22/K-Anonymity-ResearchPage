@@ -3,6 +3,7 @@ import '../styles/common_styles.css';
 import '../styles/homepage.css';
 import { useNavigate } from 'react-router-dom';
 import profilePlaceholder from '../assets/profile_placeholder.jpg';
+import { handle_scroll_top } from '../util/helpers/scroll_top';
 
 export interface Teammate {
 	name: string,
@@ -67,7 +68,10 @@ const Home = () => {
 						<div className='teammate_card' key={teammate.name}>
 							<img src={teammate.img_src} className='profile_image'/>
 
-							<button onClick={() => navigate_to_bio(teammate.name)} className='bio_navigate_button'>Bio</button>
+							<button onClick={() => {
+								navigate_to_bio(teammate.name);
+								handle_scroll_top();
+							}} className='bio_navigate_button'>Bio</button>
 
 							<div className="team_card_text_container">
 								<p className='text teammate_name'>{teammate.name}</p>

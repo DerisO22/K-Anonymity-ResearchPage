@@ -4,19 +4,23 @@ import { useTheme } from './stores/ThemesStore';
 import { HashRouter } from 'react-router-dom';
 import PageRouter from './components/PageRouter';
 import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 
 function App() {
 	const theme = useTheme();
 
 	useEffect(() => {
 		document.documentElement.setAttribute('data-theme', theme);
-	}, [theme]);	
+	}, [theme]);
 
 	return (
 		<>
 			<HashRouter>
-				<PageRouter />
-				<Navbar />
+				<div className="app_layout">
+					<Navbar />
+					<PageRouter />
+					<Footer />
+				</div>
 			</HashRouter>
 		</>
 	)
