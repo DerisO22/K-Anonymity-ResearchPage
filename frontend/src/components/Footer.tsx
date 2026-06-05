@@ -1,8 +1,6 @@
 import { NavLink } from 'react-router-dom';
 import './Footer.css';
 import { handle_scroll_top } from '../util/helpers/scroll_top';
-import githubIcon from '../../public/icons/github.png';
-import linkedinIcon from '../../public/icons/linkedin.png';
 
 import { Linkedin, Github } from '@boxicons/react';
 
