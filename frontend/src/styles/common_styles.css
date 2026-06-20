@@ -61,6 +61,9 @@ h4 {
     color: rgb(185, 175, 77);
 }
 
+/**
+    Will just import a component library instead
+*/
 .code_snippet {
     background-color: black;
     color: white;
