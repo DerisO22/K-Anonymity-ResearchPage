@@ -1,4 +1,5 @@
 import BioModal from "../components/BioModal";
+import '../styles/pages.css';
 
 const ResearchProfile = () => {
     return (
