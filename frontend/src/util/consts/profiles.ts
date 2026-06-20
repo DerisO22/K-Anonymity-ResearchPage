@@ -1,5 +1,45 @@
 import profilePlaceholder from '../../assets/profile_placeholder.jpg';
-import type { Teammate } from '../../pages/Home';
+
+export interface Teammate {
+	name: string,
+	role: string,
+	study: string,
+	img_src: string
+};
+
+export const team_info: Teammate[] = [
+	{
+		name: "Vikas Gowda",
+		role: "Professor Lead",
+		study: "",
+		img_src: profilePlaceholder,
+	},
+	{
+		name: "Connor Hill",
+		role: "Programmer",
+		study: "Computer Science",
+		img_src: profilePlaceholder,
+	},
+	{
+		name: "Andy Zheng",
+		role: "Programmer",
+		study: "Computer Science",
+		img_src: profilePlaceholder,
+		
+	},
+	{
+		name: "Deris O'Malley",
+		role: "Programmer",
+		study: "Computer Science",
+		img_src: profilePlaceholder,
+	},
+	{
+		name: "Genensis BautistaSanchez",
+		role: "Editor",
+		study: "Computer Science",
+		img_src: profilePlaceholder,
+	},
+];
 
 export interface Socials {
     github_link: string,

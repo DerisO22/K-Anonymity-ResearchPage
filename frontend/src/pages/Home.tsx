@@ -2,49 +2,8 @@ import '../styles/pages.css';
 import '../styles/common_styles.css';
 import '../styles/homepage.css';
 import { useNavigate } from 'react-router-dom';
-import profilePlaceholder from '../assets/profile_placeholder.jpg';
 import { handle_scroll_top } from '../util/helpers/scroll_top';
-
-export interface Teammate {
-	name: string,
-	role: string,
-	study: string,
-	img_src: string
-};
-
-const team_info: Teammate[] = [
-	{
-		name: "Vikas Gowda",
-		role: "Lead",
-		study: "",
-		img_src: profilePlaceholder,
-	},
-	{
-		name: "Connor Hill",
-		role: "Programmer",
-		study: "Computer Science",
-		img_src: profilePlaceholder,
-	},
-	{
-		name: "Andy Zheng",
-		role: "Programmer",
-		study: "Computer Science",
-		img_src: profilePlaceholder,
-		
-	},
-	{
-		name: "Deris O'Malley",
-		role: "Programmer",
-		study: "Computer Science",
-		img_src: profilePlaceholder,
-	},
-	{
-		name: "Genensis BautistaSanchez",
-		role: "Editor",
-		study: "Computer Science",
-		img_src: profilePlaceholder,
-	},
-];
+import { team_info } from '../util/consts/profiles';
 
 const Home = () => {
 	const navigate = useNavigate();

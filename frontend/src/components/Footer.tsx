@@ -1,12 +1,13 @@
 import { NavLink } from 'react-router-dom';
-import './Footer.css';
 import { handle_scroll_top } from '../util/helpers/scroll_top';
-
 import { Linkedin, Github } from '@boxicons/react';
+
+import './Footer.css';
 
 const Footer = () => {
     return (
         <div className="footer">
+            <div className="bezier_footer"></div>
             <div className="footer_logo"></div>
 
             <div className='footer_line'></div>
@@ -20,8 +21,8 @@ const Footer = () => {
             <div className='footer_line'></div>
 
             <div className="socials_container">
-                <a href='#' className="social_button"><Linkedin size='sm' /></a>
-                <a href='#' className="social_button"><Github size='sm'/></a>
+                <a href='#' className="social_button"><Linkedin /></a>
+                <a href='#' className="social_button"><Github/></a>
             </div>
         </div>
     )
