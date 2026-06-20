@@ -2,7 +2,7 @@ import { NavLink } from 'react-router-dom';
 import { handle_scroll_top } from '../util/helpers/scroll_top';
 import { Linkedin, Github } from '@boxicons/react';
 
-import './Footer.css';
+import './styles/Footer.css';
 
 const Footer = () => {
     return (

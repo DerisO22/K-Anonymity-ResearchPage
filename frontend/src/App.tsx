@@ -1,10 +1,11 @@
 import { useEffect } from 'react';
-import './App.css';
 import { useTheme } from './stores/ThemesStore';
 import { HashRouter } from 'react-router-dom';
-import PageRouter from './components/PageRouter';
+import PageRouter from './pages/PageRouter';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+
+import './App.css';
 
 function App() {
 	const theme = useTheme();

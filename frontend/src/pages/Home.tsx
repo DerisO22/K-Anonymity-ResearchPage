@@ -1,9 +1,10 @@
-import '../styles/pages.css';
-import '../styles/common_styles.css';
-import '../styles/homepage.css';
 import { useNavigate } from 'react-router-dom';
 import { handle_scroll_top } from '../util/helpers/scroll_top';
 import { team_info } from '../util/consts/profiles';
+
+import '../styles/pages.css';
+import '../styles/common_styles.css';
+import '../styles/homepage.css';
 
 const Home = () => {
 	const navigate = useNavigate();

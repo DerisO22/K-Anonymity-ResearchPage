@@ -1,5 +1,5 @@
 import { useThemeToggle } from '../stores/ThemesStore';
-import './ThemeButton.css';
+import './styles/ThemeButton.css';
 
 const ThemeButton = () => {
     const toggleTheme = useThemeToggle();
@@ -9,4 +9,4 @@ const ThemeButton = () => {
     )
 }
 
-export default ThemeButton
+export default ThemeButton;

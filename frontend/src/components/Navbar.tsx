@@ -1,7 +1,8 @@
 import { NavLink } from "react-router-dom";
 import { handle_scroll_top } from "../util/helpers/scroll_top";
 import ThemeButton from "./ThemeButton";
-import './Navbar.css';
+
+import './styles/Navbar.css';
 
 const Navbar = () => {
     const getLinkClass = ({isActive} : {isActive: boolean}): string => {

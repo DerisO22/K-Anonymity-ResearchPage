@@ -10,7 +10,11 @@ const Results = () => {
 			</div>
 
             <div className="page_sub_section">
+                {/* Will find a component library for visuals */}
+                {/* Probably just Recharts with some extra styles from Shadcn */}
+                <h2>Mondrian</h2>
 
+                <h2>Incognito</h2>
             </div>
         </div>
     )

@@ -1,8 +1,8 @@
 import { Routes, Route } from "react-router-dom";
-import HomeInfo from "../pages/Home";
-import Results from "../pages/Results";
-import Research from "../pages/Research";
-import ResearchProfile from "../pages/ResearchProfile";
+import HomeInfo from "./Home";
+import Results from "./Results";
+import Research from "./Research";
+import ResearchProfile from "./ResearchProfile";
 
 const PageRouter = () => {
     return (
